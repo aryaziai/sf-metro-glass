@@ -2415,7 +2415,7 @@ input, select, textarea {
 			box-shadow: none;
 			color: #fff;
 			padding: 2em 2.5em;
-			position: absolute;
+
 		}
 
 			#header.alt nav {
@@ -2556,15 +2556,12 @@ input, select, textarea {
 
 			#banner .inner header {
 				display: inline-block;
-				border-bottom: solid 2px;
-				border-top: solid 2px;
 				margin: 0 0 2em 0;
 				padding: 3px 0 3px 0;
 			}
 
 				#banner .inner header h2 {
-					border-bottom: solid 2px;
-					border-top: solid 2px;
+
 					font-size: 2.5em;
 					font-weight: 900;
 					letter-spacing: 0.2em;
