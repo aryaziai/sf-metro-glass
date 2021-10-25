@@ -1,11 +1,11 @@
-Twenty by HTML5 UP
+Twenty by
 html5up.net | @ajlkn
 Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 
 
-This is Twenty, a minimal, multi-page responsive site template for HTML5 UP.
+This is Twenty, a minimal, multi-page responsive site template for .
 
-As the name implies, this is my twentieth (!) design for HTML5 UP. Since the last
+As the name implies, this is my twentieth (!) design for . Since the last
 few have been single page affairs, I decided to go with something a bit more conventional
 and threw in four extra page layouts. Beyond that, it's the usual drill: fully responsive,
 built on HTML5/CSS3, and CCA licensed like all my other stuff. Sass sources are also

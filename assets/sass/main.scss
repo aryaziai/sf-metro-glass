@@ -8,7 +8,7 @@
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
 
 /*
-	Twenty by HTML5 UP
+	Twenty by
 	html5up.net | @ajlkn
 	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
 */
@@ -211,7 +211,7 @@ html {
 }
 
 body {
-  background: _palette(bg);
+  background: #fff;
 
   // Stops initial animations until page loads.
   &.is-preload {
@@ -437,8 +437,7 @@ header {
     }
 
     h2 + p {
-      margin-bottom: 0;
-      padding-top: 1.5em;
+      padding: 1.5em 8vw 1.5em;
     }
 
     .icon {
@@ -555,108 +554,11 @@ input[type="email"] {
   }
 }
 
-/* Icon */
-
-.icon {
-  @include icon;
-  position: relative;
-
-  &.solid {
-    &:before {
-      font-weight: 900;
-    }
-  }
-
-  &:before {
-    line-height: inherit;
-  }
-
-  &.brands {
-    &:before {
-      font-family: "Font Awesome 5 Brands";
-    }
-  }
-
-  &.circle {
-    @include vendor("transition", "all 0.2s ease-in-out");
-    border: 0;
-    border-radius: 100%;
-    display: inline-block;
-    font-size: 1.25em;
-    height: 2.25em;
-    left: 0;
-    line-height: 2.25em;
-    text-align: center;
-    text-decoration: none;
-    top: 0;
-    width: 2.25em;
-
-    &:hover {
-      top: -0.2em;
-    }
-
-    &.fa-twitter {
-      background: _palette(twitter, bg);
-      color: _palette(twitter, fg);
-
-      &:hover {
-        background: lighten(_palette(twitter, bg), 4);
-      }
-    }
-
-    &.fa-facebook-f {
-      background: _palette(facebook, bg);
-      color: _palette(facebook, fg);
-
-      &:hover {
-        background: lighten(_palette(facebook, bg), 4);
-      }
-    }
-
-    &.fa-google-plus-g {
-      background: _palette(google-plus, bg);
-      color: _palette(google-plus, fg);
-
-      &:hover {
-        background: lighten(_palette(google-plus, bg), 4);
-      }
-    }
-
-    &.fa-github {
-      background: _palette(github, bg);
-      color: _palette(github, fg);
-
-      &:hover {
-        background: lighten(_palette(github, bg), 4);
-      }
-    }
-
-    &.fa-dribbble {
-      background: _palette(dribbble, bg);
-      color: _palette(dribbble, fg);
-
-      &:hover {
-        background: lighten(_palette(dribbble, bg), 4);
-      }
-    }
-  }
-
-  &.featured {
-    cursor: default;
-    display: block;
-    margin: 0 0 1.5em 0;
-    opacity: 0.35;
-    text-align: center;
-
-    &:before {
-      font-size: 5em;
-      line-height: 1em;
-    }
-  }
-
-  > .label {
-    display: none;
-  }
+img.featured {
+  width: 225px;
+  border-radius: 50%;
+  height: 225px;
+  margin-bottom: 30px;
 }
 
 /* List */
@@ -747,6 +649,10 @@ ul.buttons {
   }
 
   &.stacked {
+    display: flex;
+    align-items: end;
+    justify-content: space-around;
+
     li {
       display: block;
       padding: 1.5em 0 0 0;
@@ -806,7 +712,7 @@ button,
   @include vendor("transition", ("color 0.2s ease-in-out", "border-color 0.2s ease-in-out", "background-color 0.2s ease-in-out"));
   background: none;
   border: solid 1px;
-  border-radius: 0;
+  border-radius: 2vw;
   color: inherit;
   cursor: pointer;
   display: inline-block;
@@ -826,8 +732,8 @@ button,
   }
 
   &.primary {
-    background: _palette(one, bg);
-    border-color: _palette(one, bg);
+    background: #169bc7;
+    border-color: #169bc7;
     color: _palette(one, fg) !important;
 
     &:hover {
@@ -923,6 +829,10 @@ button,
   width: 100%;
   z-index: 10000;
 
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-between;
+
   h1 {
     font-weight: 900;
     margin: 0;
@@ -932,12 +842,13 @@ button,
     }
   }
 
+  &.alt img.logo {
+    filter: brightness(0) invert(1);
+  }
+
   nav {
     letter-spacing: 0.075em;
-    position: absolute;
-    right: 1.5em;
     text-transform: uppercase;
-    top: 0.75em;
 
     ul {
       list-style: none;
@@ -1001,6 +912,10 @@ button,
 
   &.reveal {
     @include vendor("animation", "reveal-header 0.5s");
+
+    .logo {
+      filter: contrast(1.5);
+    }
   }
 
   &.alt {
@@ -1008,13 +923,8 @@ button,
     background: _palette(header, alt-bg);
     box-shadow: none;
     color: _palette(header, alt-fg);
-    padding: 2em 2.5em;
-    position: absolute;
 
     nav {
-      right: 2.5em;
-      top: 1.75em;
-
       ul {
         li {
           &.active,
@@ -1095,26 +1005,135 @@ button,
 }
 
 #banner {
-  background-attachment: scroll, scroll, scroll, fixed;
-  background-color: _palette(three, bg);
-  background-image: url("images/banner.jpg");
-  background-position: bottom left, bottom right, top left, top center;
-  background-repeat: no-repeat, no-repeat, repeat, no-repeat;
-  background-size: $pattern-background-size, $pattern-background-size, auto, cover;
-  color: _palette(banner, fg);
+  display: -moz-flex;
+  display: -webkit-flex;
+  display: -ms-flex;
+  display: flex;
+  -moz-flex-direction: column;
+  -webkit-flex-direction: column;
+  -ms-flex-direction: column;
+  flex-direction: column;
+  -moz-justify-content: center;
+  -webkit-justify-content: center;
+  -ms-justify-content: center;
+  justify-content: center;
   cursor: default;
-  padding: 6em 0;
+  height: 100vh;
+  min-height: 35em;
+  overflow: hidden;
+  position: relative;
   text-align: center;
+  background: #000;
+}
+
+#banner .inner {
+  margin: auto;
+  position: absolute;
+  width: 100%;
+}
+
+#banner h2 {
+  -moz-transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  transform: scale(1);
+  -moz-transition: -moz-transform 0.5s ease, opacity 0.5s ease;
+  -webkit-transition: -webkit-transform 0.5s ease, opacity 0.5s ease;
+  -ms-transition: -ms-transform 0.5s ease, opacity 0.5s ease;
+  transition: transform 0.5s ease, opacity 0.5s ease;
+  display: inline-block;
+  font-size: 1.75em;
+  opacity: 1;
+  padding: 0.35em 1em;
+  position: relative;
+  z-index: 1;
+}
+
+#banner p {
+  position: relative;
+  letter-spacing: 0.225em;
+  text-transform: uppercase;
+  width: 31em;
+  text-align: center;
+  margin: 0 auto 1.5em;
+}
+
+#banner .more {
+  transition: transform 0.75s ease, opacity 0.75s ease;
+
+  transition-delay: 3.5s;
+
+  transform: translateY(0);
+  padding-left: 0.225em;
+  width: 16em;
+  z-index: 1;
+  -webkit-appearance: none;
+  -ms-appearance: none;
+  appearance: none;
+  -moz-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -webkit-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  -ms-transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  transition: background-color 0.2s ease-in-out, color 0.2s ease-in-out;
+  background-color: transparent;
+  border-radius: 3px;
+  border: 1px solid;
+  color: #fff;
+  cursor: pointer;
+  display: inline-block;
+  font-size: 0.8em;
+  font-weight: 600;
+  letter-spacing: 0.225em;
+  line-height: 3.125em;
+  max-width: 30em;
+  padding: 0 2.75em;
+  text-decoration: none;
+  text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 847px) {
+  .video {
+    position: fixed;
+    object-fit: fill;
+    width: 100%;
+  }
+}
+
+@media screen and (max-width: 846px) {
+  .video {
+    position: absolute;
+    height: 100%;
+    opacity: 0.3;
+    top: 0;
+    left: 0;
+  }
+}
+
+#banner {
+  //   background-color: _palette(three, bg);
+  //   background: url("../../images/banner.jpg") center / cover no-repeat fixed;
+  //   color: _palette(banner, fg);
+  //   cursor: default;
+  //   text-align: center;
+  //   min-height: 90vh;
+  //   padding: 13rem;
 
   .inner {
     @include vendor("animation", "reveal-banner 1s 0.25s ease-in-out");
     @include vendor("animation-fill-mode", "forwards");
-    background: transparentize(_palette(banner, inner-bg), 0.5);
+    background: rgb(28 16 16 / 61%);
     color: _palette(banner, inner-fg);
-    display: inline-block;
     opacity: 0;
     padding: 3em;
     text-align: center;
+    // height: 100%;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
 
     header {
       display: inline-block;
@@ -1132,21 +1151,22 @@ button,
       }
     }
 
-    p {
-      letter-spacing: 0.1em;
-      margin: 0;
-      text-transform: uppercase;
+    //     p {
+    //       letter-spacing: 0.1em;
+    //       margin: 0;
+    //       text-transform: uppercase;
 
-      a {
-        color: inherit;
-        font-weight: 400;
-        text-decoration: none;
-      }
-    }
+    //       a {
+    //         color: inherit;
+    //         font-weight: 400;
+    //         text-decoration: none;
+    //       }
+    //     }
 
-    footer {
-      margin: 2em 0 0 0;
-    }
+    //     footer {
+    //       margin: 2em 0 0 0;
+    //     }
+    //   }
   }
 }
 
@@ -1158,6 +1178,9 @@ button,
   background-repeat: no-repeat;
   background-size: $pattern-background-size;
   padding: 7em 0;
+
+  background: white;
+  position: relative;
 
   > :last-child {
     margin-bottom: 0;
@@ -1336,8 +1359,6 @@ body.index #main {
 /* Narrow */
 
 @include breakpoint("<=narrow") {
-  $pattern-background-size: 15em;
-
   /* Basic */
 
   body,
@@ -1398,10 +1419,6 @@ body.index #main {
   }
 
   /* Banner */
-
-  #banner {
-    background-size: $pattern-background-size, $pattern-background-size, auto, cover;
-  }
 
   /* Main */
 
@@ -1830,7 +1847,6 @@ body.index #main {
   /* Banner */
 
   #banner {
-    background-size: $pattern-background-size, $pattern-background-size, auto, cover;
     padding: 6em 0;
 
     .inner {
