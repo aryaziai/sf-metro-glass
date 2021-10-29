@@ -1,96 +1,95 @@
-/*
-	Twenty by
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
+// Fade in elements on scroll
+var onEnterViewPort = function (entries, observer) {
+  entries.forEach(function (entry) {
+    if (entry.intersectionRatio !== 0) {
+      entry.target.classList.add("in");
+    } else {
+      // entry.target.classList.remove('in');
+    }
+  });
+};
 
-(function($) {
+var observer = new IntersectionObserver(onEnterViewPort, {});
 
-	var	$window = $(window),
-		$body = $('body'),
-		$header = $('#header'),
-		$banner = $('#banner');
+var fadeMeIn = document.querySelectorAll(".fade-in-scroll");
+for (var i = 0; i < fadeMeIn.length; ++i) {
+  observer.observe(fadeMeIn[i]);
+}
 
-	// Breakpoints.
-		breakpoints({
-			wide:      [ '1281px',  '1680px' ],
-			normal:    [ '981px',   '1280px' ],
-			narrow:    [ '841px',   '980px'  ],
-			narrower:  [ '737px',   '840px'  ],
-			mobile:    [ null,      '736px'  ]
-		});
+(function ($) {
+  var $window = $(window),
+    $body = $("body"),
+    $header = $("#header"),
+    $banner = $("#banner");
 
-	// Play initial animations on page load.
-		$window.on('load', function() {
-			window.setTimeout(function() {
-				$body.removeClass('is-preload');
-			}, 100);
-		});
+  // Breakpoints.
+  breakpoints({
+    wide: ["1281px", "1680px"],
+    normal: ["981px", "1280px"],
+    narrow: ["841px", "980px"],
+    narrower: ["737px", "840px"],
+    mobile: [null, "736px"],
+  });
 
-	// Scrolly.
-		$('.scrolly').scrolly({
-			speed: 1000,
-			offset: function() { return $header.height() + 10; }
-		});
+  // Play initial animations on page load.
+  $window.on("load", function () {
+    window.setTimeout(function () {
+      $body.removeClass("is-preload");
+    }, 100);
+  });
 
-	// Dropdowns.
-		$('#nav > ul').dropotron({
-			mode: 'fade',
-			noOpenerFade: true,
-			expandMode: (browser.mobile ? 'click' : 'hover')
-		});
+  // Scrolly.
+  $(".scrolly").scrolly({
+    speed: 1000,
+    offset: function () {
+      return $header.height() + 10;
+    },
+  });
 
-	// Nav Panel.
+  // Dropdowns.
+  $("#nav > ul").dropotron({
+    mode: "fade",
+    noOpenerFade: true,
+    expandMode: browser.mobile ? "click" : "hover",
+  });
 
-		// Button.
-			$(
-				'<div id="navButton">' +
-					'<a href="#navPanel" class="toggle"></a>' +
-				'</div>'
-			)
-				.appendTo($body);
+  // Nav Panel.
 
-		// Panel.
-			$(
-				'<div id="navPanel">' +
-					'<nav>' +
-						$('#nav').navList() +
-					'</nav>' +
-				'</div>'
-			)
-				.appendTo($body)
-				.panel({
-					delay: 500,
-					hideOnClick: true,
-					hideOnSwipe: true,
-					resetScroll: true,
-					resetForms: true,
-					side: 'left',
-					target: $body,
-					visibleClass: 'navPanel-visible'
-				});
+  // Button.
+  $('<div id="navButton">' + '<a href="#navPanel" class="toggle"></a>' + "</div>").appendTo($body);
 
-		// Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
-			if (browser.os == 'wp' && browser.osVersion < 10)
-				$('#navButton, #navPanel, #page-wrapper')
-					.css('transition', 'none');
+  // Panel.
+  $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
+    .appendTo($body)
+    .panel({
+      delay: 500,
+      hideOnClick: true,
+      hideOnSwipe: true,
+      resetScroll: true,
+      resetForms: true,
+      side: "left",
+      target: $body,
+      visibleClass: "navPanel-visible",
+    });
 
-	// Header.
-		if (!browser.mobile
-		&&	$header.hasClass('alt')
-		&&	$banner.length > 0) {
+  // Fix: Remove navPanel transitions on WP<10 (poor/buggy performance).
+  if (browser.os == "wp" && browser.osVersion < 10) $("#navButton, #navPanel, #page-wrapper").css("transition", "none");
 
-			$window.on('load', function() {
-
-				$banner.scrollex({
-					bottom:		$header.outerHeight(),
-					terminate:	function() { $header.removeClass('alt'); },
-					enter:		function() { $header.addClass('alt reveal'); },
-					leave:		function() { $header.removeClass('alt'); }
-				});
-
-			});
-
-		}
-
+  // Header.
+  if (!browser.mobile && $header.hasClass("alt") && $banner.length > 0) {
+    $window.on("load", function () {
+      $banner.scrollex({
+        bottom: $header.outerHeight(),
+        terminate: function () {
+          $header.removeClass("alt");
+        },
+        enter: function () {
+          $header.addClass("alt reveal");
+        },
+        leave: function () {
+          $header.removeClass("alt");
+        },
+      });
+    });
+  }
 })(jQuery);

@@ -4,14 +4,7 @@
 @import "libs/vendor";
 @import "libs/breakpoints";
 @import "libs/html-grid";
-@import url("fontawesome-all.min.css");
 @import url("https://fonts.googleapis.com/css?family=Lato:300,400,900");
-
-/*
-	Twenty by
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
-*/
 
 $pattern-background-size: 25em;
 
@@ -437,7 +430,7 @@ header {
     }
 
     h2 + p {
-      padding: 1.5em 8vw 1.5em;
+      padding: 2em 8vw 2.5em;
     }
 
     .icon {
@@ -557,8 +550,8 @@ input[type="email"] {
 img.featured {
   width: 225px;
   border-radius: 50%;
-  height: 225px;
   margin-bottom: 30px;
+  aspect-ratio: 1 / 1;
 }
 
 /* List */
@@ -755,21 +748,24 @@ button,
 
 /* Wrapper */
 
+.black-round-bg {
+  background: rgb(20 20 20 / 92%);
+  border-radius: 2vw;
+  padding: 3vw !important;
+}
+
 .wrapper {
-  margin-bottom: 5em;
-  padding: 5em;
+  margin-bottom: 8.5em;
+  padding: 7em 6em;
 
   &.style1 {
     padding: 0;
   }
 
   &.style2 {
-    background-color: _palette(one, bg);
-    background-image: url("images/light-bl.svg"), url("images/light-br.svg");
-    background-position: bottom left, bottom right;
-    background-repeat: no-repeat, no-repeat;
-    background-size: $pattern-background-size, $pattern-background-size;
+    background: url(../../images/banner.jpg) center / cover no-repeat fixed;
     color: _palette(one, fg);
+    width: 100%;
 
     input[type="button"],
     input[type="submit"],
@@ -854,6 +850,11 @@ button,
       list-style: none;
       padding-left: 0;
 
+      padding-right: 25px;
+      margin-bottom: 1em;
+
+      letter-spacing: 1.75px;
+
       li {
         display: inline-block;
         margin-left: 1.5em;
@@ -886,9 +887,9 @@ button,
           > a {
             @include icon(false, solid);
 
-            &:before {
-              content: "\f107";
-              margin-right: 0.65em;
+            &:after {
+              content: "▾";
+              margin-left: 0.5em;
             }
           }
         }
@@ -911,10 +912,13 @@ button,
   }
 
   &.reveal {
+    padding: 0.5em;
+
     @include vendor("animation", "reveal-header 0.5s");
 
     .logo {
       filter: contrast(1.5);
+      padding-left: 1em;
     }
   }
 
@@ -926,6 +930,10 @@ button,
 
     nav {
       ul {
+        background: rgba(92, 86, 86, 0.64);
+        color: #fff !important;
+        border-radius: 20px;
+
         li {
           &.active,
           &:hover {
@@ -1018,7 +1026,7 @@ button,
   -ms-justify-content: center;
   justify-content: center;
   cursor: default;
-  height: 100vh;
+  height: 110vh;
   min-height: 35em;
   overflow: hidden;
   position: relative;
@@ -1226,10 +1234,11 @@ body.index #main {
 /* Footer */
 
 #footer {
-  background: _palette(footer, bg);
+  background: #fff;
   color: _palette(footer, fg);
   padding: 5em 5em 10em 5em;
   text-align: center;
+  position: relative;
 
   .copyright {
     font-size: 0.8em;
@@ -1926,5 +1935,14 @@ body.index #main {
         height: 34px;
       }
     }
+  }
+}
+
+.fade-in-scroll {
+  opacity: 0;
+
+  &.in {
+    opacity: 1;
+    transition: 1.3s ease-in;
   }
 }
