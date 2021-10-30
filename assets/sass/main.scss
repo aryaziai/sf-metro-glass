@@ -430,7 +430,7 @@ header {
     }
 
     h2 + p {
-      padding: 2em 8vw 2.5em;
+      padding: 2em 8vw 1em;
     }
 
     .icon {
@@ -685,12 +685,6 @@ table {
       background: _palette(fg);
       color: #fff;
     }
-
-    tfoot {
-    }
-
-    tbody {
-    }
   }
 }
 
@@ -712,8 +706,7 @@ button,
   font-size: 0.8em;
   font-weight: 900;
   letter-spacing: 2px;
-  min-width: 18em;
-  padding: 0 0.75em;
+  padding: 0 2.75em;
   line-height: 3.75em;
   text-align: center;
   text-decoration: none;
@@ -749,9 +742,9 @@ button,
 /* Wrapper */
 
 .black-round-bg {
-  background: rgb(20 20 20 / 92%);
+  background: rgb(40 30 27 / 98%);
   border-radius: 2vw;
-  padding: 3vw !important;
+  padding: 4vw !important;
 }
 
 .wrapper {
@@ -763,9 +756,13 @@ button,
   }
 
   &.style2 {
-    background: url(../../images/banner.jpg) center / cover no-repeat fixed;
+    background: url(../../images/banner2.jpeg) center / cover no-repeat fixed;
     color: _palette(one, fg);
     width: 100%;
+
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
 
     input[type="button"],
     input[type="submit"],
@@ -1031,7 +1028,7 @@ button,
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: #000;
+  background-color: #4d3f3b;
 }
 
 #banner .inner {
@@ -1102,11 +1099,19 @@ button,
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1440px) {
+  .video {
+    position: fixed;
+    // object-fit: fill;
+
+    min-height: 100%;
+  }
+}
+
 @media screen and (min-width: 847px) {
   .video {
     position: fixed;
-    object-fit: fill;
-    width: 100%;
+    min-width: 100%;
   }
 }
 
@@ -1416,10 +1421,6 @@ body.index #main {
 
     &.style1 {
       padding: 0 2.5em;
-    }
-
-    &.style2 {
-      background-size: $pattern-background-size;
     }
 
     &.style4 {
@@ -1840,11 +1841,6 @@ body.index #main {
 
     &.style1 {
       padding: 0 1.5em;
-    }
-
-    &.style2 {
-      background-size: $pattern-background-size;
-      padding: 2.25em 1.5em;
     }
 
     &.style4 {

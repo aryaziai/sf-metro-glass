@@ -1469,7 +1469,7 @@ header.special h2 {
   margin-bottom: 0;
 }
 header.special h2 + p {
-  padding: 2em 8vw 2.5em;
+  padding: 2em 8vw 1em;
 }
 header.special .icon {
   cursor: default;
@@ -1696,6 +1696,7 @@ table.default thead {
   background: #7c8081;
   color: #fff;
 }
+
 /* Button */
 input[type=button],
 input[type=submit],
@@ -1719,8 +1720,7 @@ button,
   font-size: 0.8em;
   font-weight: 900;
   letter-spacing: 2px;
-  min-width: 18em;
-  padding: 0 0.75em;
+  padding: 0 2.75em;
   line-height: 3.75em;
   text-align: center;
   text-decoration: none;
@@ -1770,9 +1770,9 @@ button.small,
 
 /* Wrapper */
 .black-round-bg {
-  background: rgba(20, 20, 20, 0.92);
+  background: rgba(40, 30, 27, 0.98);
   border-radius: 2vw;
-  padding: 3vw !important;
+  padding: 4vw !important;
 }
 
 .wrapper {
@@ -1783,9 +1783,12 @@ button.small,
   padding: 0;
 }
 .wrapper.style2 {
-  background: url(../../images/banner.jpg) center/cover no-repeat fixed;
+  background: url(../../images/banner2.jpeg) center/cover no-repeat fixed;
   color: #fff;
   width: 100%;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
 }
 .wrapper.style2 input[type=button]:hover,
 .wrapper.style2 input[type=submit]:hover,
@@ -2074,7 +2077,7 @@ button.small,
   overflow: hidden;
   position: relative;
   text-align: center;
-  background: #000;
+  background-color: #4d3f3b;
 }
 
 #banner .inner {
@@ -2143,11 +2146,16 @@ button.small,
   margin: 0 auto;
 }
 
+@media screen and (min-width: 1440px) {
+  .video {
+    position: fixed;
+    min-height: 100%;
+  }
+}
 @media screen and (min-width: 847px) {
   .video {
     position: fixed;
-    object-fit: fill;
-    width: 100%;
+    min-width: 100%;
   }
 }
 @media screen and (max-width: 846px) {
@@ -2377,9 +2385,6 @@ textarea {
   }
   .wrapper.style1 {
     padding: 0 2.5em;
-  }
-  .wrapper.style2 {
-    background-size: 25em;
   }
   .wrapper.style4 {
     padding: 2.5em;
@@ -2764,10 +2769,6 @@ button.fit,
   }
   .wrapper.style1 {
     padding: 0 1.5em;
-  }
-  .wrapper.style2 {
-    background-size: 10em;
-    padding: 2.25em 1.5em;
   }
   .wrapper.style4 {
     background-size: 10em;
