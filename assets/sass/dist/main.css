@@ -1581,7 +1581,7 @@ input[type=email] {
 }
 
 img.featured {
-  width: 225px;
+  width: 220px;
   border-radius: 50%;
   margin-bottom: 30px;
   aspect-ratio: 1/1;
@@ -1821,7 +1821,7 @@ button.small,
 .wrapper.style4 {
   background: #fff;
   color: inherit;
-  padding: 4em;
+  padding: 0.25em 4em 2em;
 }
 
 /* Header */
