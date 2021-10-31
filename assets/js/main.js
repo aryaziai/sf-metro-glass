@@ -1,3 +1,9 @@
+var tagString = '<header id="header" class="alt"><a href="index.html" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a href="#">Services</a> <ul> <li><a href="commercial.html">Commercial Service</a></li> <li><a href="residential.html">Residential Service</a></li> <li><a href="shower-enclosures.html">Shower Enclosure</a></li> <li><a href="references-projects.html">References & Projects</a></li> </ul> </li> <li><a href="no-sidebar.html">Gallery</a></li> <li><a href="contact.html">Contact</a></li> </ul> </nav> </header>';
+
+var nav = document.querySelector("nav");
+var documentFragment = document.createRange().createContextualFragment(tagString);
+nav.append(documentFragment);
+
 // Fade in elements on scroll
 var onEnterViewPort = function (entries, observer) {
   entries.forEach(function (entry) {
