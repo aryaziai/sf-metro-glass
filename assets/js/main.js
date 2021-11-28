@@ -1,8 +1,12 @@
-var tagString = '<header id="header" class="alt"><a href="index.html" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a href="#">Services</a> <ul> <li><a href="commercial.html">Commercial Service</a></li> <li><a href="residential.html">Residential Service</a></li> <li><a href="shower-enclosures.html">Shower Enclosure</a></li> <li><a href="references-projects.html">References & Projects</a></li> </ul> </li> <li><a href="no-sidebar.html">Gallery</a></li> <li><a href="contact.html">Contact</a></li> </ul> </nav> </header>';
+var navString = '<header id="header" class="alt"><a href="index.html" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a href="#">Services</a> <ul> <li><a href="commercial.html">Commercial Service</a></li> <li><a href="residential.html">Residential Service</a></li> <li><a href="shower-enclosures.html">Shower Enclosure</a></li> <li><a href="references-projects.html">References & Projects</a></li> </ul> </li> <li><a href="no-sidebar.html">Gallery</a></li> <li><a href="contact.html">Contact</a></li> </ul> </nav> </header>';
+var headerNav = document.querySelector("nav");
+var navbar = document.createRange().createContextualFragment(navString);
+headerNav.append(navbar);
 
-var nav = document.querySelector("nav");
-var documentFragment = document.createRange().createContextualFragment(tagString);
-nav.append(documentFragment);
+var footerString = '<ul class="icons"> <li> <a href="#" class="icon brands circle fa-twitter"><span class="label">Twitter</span></a> </li> <li> <a href="#" class="icon brands circle fa-facebook-f"><span class="label">Facebook</span></a> </li> <li> <a href="#" class="icon brands circle fa-google-plus-g"><span class="label">Google+</span></a> </li> <li> <a href="#" class="icon brands circle fa-github"><span class="label">Github</span></a> </li> <li> <a href="#" class="icon brands circle fa-dribbble"><span class="label">Dribbble</span></a> </li> </ul> <ul class="copyright"> <li>&copy; Metropolitan Glass Corp</li> </ul>';
+var footerNav = document.querySelector("#footer");
+var footer = document.createRange().createContextualFragment(footerString);
+footerNav.append(footer);
 
 // Fade in elements on scroll
 var onEnterViewPort = function (entries, observer) {
