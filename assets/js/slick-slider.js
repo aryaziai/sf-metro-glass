@@ -2,23 +2,29 @@ jQuery(document).ready(function ($) {
   $(".slider").slick({
     dots: false,
     infinite: true,
-    speed: 500,
-    slidesToShow: 3,
+    speed: 700,
+    slidesToShow: 4,
     slidesToScroll: 1,
-    autoplay: false,
-    autoplaySpeed: 2000,
+    autoplay: true,
+    autoplaySpeed: 2200,
     arrows: true,
     responsive: [
       {
-        breakpoint: 600,
+        breakpoint: 1550,
         settings: {
-          slidesToShow: 1,
+          slidesToShow: 3,
           slidesToScroll: 1,
-          autoplay: true,
         },
       },
       {
-        breakpoint: 400,
+        breakpoint: 1200,
+        settings: {
+          slidesToShow: 2,
+          slidesToScroll: 1,
+        },
+      },
+      {
+        breakpoint: 700,
         settings: {
           arrows: false,
           slidesToShow: 1,

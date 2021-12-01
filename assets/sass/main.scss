@@ -861,7 +861,7 @@ button,
 
       li {
         display: inline-block;
-        margin-left: 1.5em;
+        margin-left: 1.25em;
         padding-left: 0;
 
         > ul {
@@ -943,7 +943,7 @@ button,
           &.active,
           &:hover {
             > a {
-              border: solid 1px;
+              // border: solid 1px;
             }
           }
         }
@@ -1036,6 +1036,18 @@ button,
   position: relative;
   text-align: center;
   background-color: #4d3f3b;
+
+  &.building-wallpaper {
+    background: url("/assets/images/building-wallpaper.jpg") center / cover no-repeat;
+  }
+
+  &.residential-wallpaper {
+    background: url("/assets/images/residential-wallpaper.jpg") center / cover no-repeat;
+  }
+
+  &.references-wallpaper {
+    background: url("/assets/images/references-wallpaper.jpg") center / cover no-repeat;
+  }
 }
 
 .full {
@@ -1205,7 +1217,7 @@ button,
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
   background-size: $pattern-background-size;
-  padding: 7em 0;
+  padding: 7em 0 0;
 
   background: white;
   position: relative;
@@ -1755,9 +1767,9 @@ body.index #main {
     letter-spacing: 0.025em;
   }
 
-  p {
-    text-align: justify;
-  }
+  // p {
+  //   text-align: justify;
+  // }
 
   /* Section/Article */
 
@@ -2467,7 +2479,7 @@ body {
   margin: 0 auto;
 }
 .slick-slide {
-  margin: 0 2vw;
+  margin: 0 2.3vw;
 }
 .slick-list {
   margin: 0px -5px 0px -5px;
@@ -2502,6 +2514,7 @@ button.slick-prev:hover {
   font-weight: bold;
 }
 .slider img {
+  border-radius: 20px;
   height: 300px;
 }
 
@@ -2509,6 +2522,7 @@ button.slick-prev:hover {
 /* Slider */
 .slick-slider {
   position: relative;
+  cursor: grab;
 
   display: block;
 

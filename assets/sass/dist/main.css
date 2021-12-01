@@ -1904,7 +1904,7 @@ button.small,
 }
 #header nav ul li {
   display: inline-block;
-  margin-left: 1.5em;
+  margin-left: 1.25em;
   padding-left: 0;
 }
 #header nav ul li > ul {
@@ -1982,10 +1982,6 @@ button.small,
   color: #fff !important;
   border-radius: 20px;
 }
-#header.alt nav ul li.active > a, #header.alt nav ul li:hover > a {
-  border: solid 1px;
-}
-
 /* Dropotron */
 .dropotron {
   list-style: none;
@@ -2086,6 +2082,15 @@ button.small,
   position: relative;
   text-align: center;
   background-color: #4d3f3b;
+}
+#banner.building-wallpaper {
+  background: url("/assets/images/building-wallpaper.jpg") center/cover no-repeat;
+}
+#banner.residential-wallpaper {
+  background: url("/assets/images/residential-wallpaper.jpg") center/cover no-repeat;
+}
+#banner.references-wallpaper {
+  background: url("/assets/images/references-wallpaper.jpg") center/cover no-repeat;
 }
 
 .full {
@@ -2221,7 +2226,7 @@ button.small,
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
   background-size: 25em;
-  padding: 7em 0;
+  padding: 7em 0 0;
   background: white;
   position: relative;
 }
@@ -2704,10 +2709,6 @@ button.small,
   h3 {
     font-size: 1em;
     letter-spacing: 0.025em;
-  }
-
-  p {
-    text-align: justify;
   }
 
   /* Section/Article */
@@ -3625,7 +3626,7 @@ body {
 }
 
 .slick-slide {
-  margin: 0 2vw;
+  margin: 0 2.3vw;
 }
 
 .slick-list {
@@ -3665,6 +3666,7 @@ button.slick-prev:hover {
 }
 
 .slider img {
+  border-radius: 20px;
   height: 300px;
 }
 
@@ -3672,6 +3674,7 @@ button.slick-prev:hover {
 /* Slider */
 .slick-slider {
   position: relative;
+  cursor: grab;
   display: block;
   -moz-box-sizing: border-box;
   box-sizing: border-box;
