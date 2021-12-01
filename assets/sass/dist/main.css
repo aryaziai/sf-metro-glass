@@ -2083,14 +2083,20 @@ button.small,
   text-align: center;
   background-color: #4d3f3b;
 }
-#banner.building-wallpaper {
-  background: url("/assets/images/building-wallpaper.jpg") center/cover no-repeat;
+#banner.commercial-wallpaper {
+  background: url("/assets/images/wallpaper/commercial-wallpaper.jpg") fixed center/cover no-repeat;
 }
 #banner.residential-wallpaper {
-  background: url("/assets/images/residential-wallpaper.jpg") center/cover no-repeat;
+  background: url("/assets/images/wallpaper/residential-wallpaper.jpg") fixed center/cover no-repeat;
 }
 #banner.references-wallpaper {
-  background: url("/assets/images/references-wallpaper.jpg") center/cover no-repeat;
+  background: url("/assets/images/wallpaper/references-wallpaper.jpg") fixed center/cover no-repeat;
+}
+#banner.contact-wallpaper {
+  background: url("/assets/images/wallpaper/contact-wallpaper.jpg") fixed center/cover no-repeat;
+}
+#banner.shower-wallpaper {
+  background: url("/assets/images/wallpaper/shower-wallpaper.jpg") fixed center/cover no-repeat;
 }
 
 .full {
