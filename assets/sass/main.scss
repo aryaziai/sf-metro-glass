@@ -255,6 +255,10 @@ blockquote {
   margin: 0 0 2em 0;
 }
 
+p {
+  max-width: 85vw;
+}
+
 h1,
 h2,
 h3,
@@ -758,7 +762,7 @@ button,
 
 .wrapper {
   margin-bottom: 8.5em;
-  padding: 7em 6em;
+  padding: 7em 6em 6em;
 
   &.style1 {
     padding: 0;
@@ -995,7 +999,7 @@ button,
 
     &:hover {
       > a {
-        background: _palette(one, bg);
+        background: #bbb;
         color: _palette(one, fg);
       }
     }
@@ -1036,6 +1040,10 @@ button,
   position: relative;
   text-align: center;
   background-color: #4d3f3b;
+
+  &.home-wallpaper {
+    background: url("/assets/images/wallpaper/home-wallpaper.png") fixed center / cover no-repeat;
+  }
 
   &.commercial-wallpaper {
     background: url("/assets/images/wallpaper/commercial-wallpaper.jpg") fixed center / cover no-repeat;
@@ -1276,29 +1284,27 @@ body.index #main {
 #footer {
   background: #fff;
   color: _palette(footer, fg);
-  padding: 5em 5em 10em 5em;
+  padding: 5.5em 0 4.5em 0;
   text-align: center;
   position: relative;
 
-  .copyright {
-    font-size: 0.8em;
-    line-height: 1em;
+  font-size: 0.8em;
+  line-height: 2;
 
-    a {
-      color: inherit;
-    }
+  a {
+    color: inherit;
+  }
 
-    li {
-      display: inline-block;
-      margin-left: 1em;
-      padding-left: 1em;
-      border-left: dotted 1px;
+  li {
+    display: inline-block;
+    margin-left: 1em;
+    padding-left: 1em;
+    border-left: dotted 1px;
 
-      &:first-child {
-        margin: 0;
-        padding: 0;
-        border: 0;
-      }
+    &:first-child {
+      margin: 0;
+      padding: 0;
+      border: 0;
     }
   }
 }
@@ -1866,7 +1872,7 @@ body.index #main {
 
   .wrapper {
     margin-bottom: 2.5em;
-    padding: 2.25em 1.5em;
+    padding: 4.25em 1.5em 3.25em;
 
     &.special {
       br {
@@ -1893,6 +1899,8 @@ body.index #main {
       // background: none;
       // display: block;
       padding: 0 1.5em;
+      height: 105vh;
+      background: rgba(28, 16, 16, 0.51) !important;
 
       header {
         h2 {
@@ -1914,7 +1922,7 @@ body.index #main {
 
   #main {
     background-size: $pattern-background-size;
-    padding: 3.5em 0 2.5em 0;
+    padding: 3.5em 0.5em 2.5em;
   }
 
   body.index #main {
@@ -2478,335 +2486,4 @@ body {
   right: 0;
   box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
   overflow: hidden;
-}
-
-// slick slider
-
-.slider {
-  max-width: 90vw;
-  margin: 0 auto;
-}
-.slick-slide {
-  margin: 0 2.3vw;
-}
-.slick-list {
-  margin: 0px -5px 0px -5px;
-}
-button.slick-next,
-button.slick-next:hover {
-  position: absolute;
-  top: 41%;
-  right: 54px;
-  width: 47px;
-  height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
-  background-size: 95px;
-}
-button.slick-prev,
-button.slick-prev:hover {
-  position: absolute;
-  top: 41%;
-  left: 15px;
-  z-index: 1;
-  width: 47px;
-  height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
-  background-size: 95px;
-  background-position-x: right;
-}
-.slick-prev:before,
-.slick-next:before {
-  font-size: 70px;
-  color: #ea8496;
-  line-height: inherit;
-  font-weight: bold;
-}
-.slider img {
-  border-radius: 20px;
-  height: 300px;
-}
-
-/* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
-/* Slider */
-.slick-slider {
-  position: relative;
-  cursor: grab;
-
-  display: block;
-
-  -moz-box-sizing: border-box;
-  box-sizing: border-box;
-
-  -webkit-user-select: none;
-  -moz-user-select: none;
-  -ms-user-select: none;
-  user-select: none;
-
-  -webkit-touch-callout: none;
-  -khtml-user-select: none;
-  -ms-touch-action: pan-y;
-  touch-action: pan-y;
-  -webkit-tap-highlight-color: transparent;
-}
-
-.slick-list {
-  position: relative;
-
-  display: block;
-  overflow: hidden;
-
-  margin: 0;
-  padding: 0;
-}
-.slick-list:focus {
-  outline: none;
-}
-.slick-list.dragging {
-  cursor: pointer;
-  cursor: hand;
-}
-
-.slick-slider .slick-track,
-.slick-slider .slick-list {
-  -webkit-transform: translate3d(0, 0, 0);
-  -moz-transform: translate3d(0, 0, 0);
-  -ms-transform: translate3d(0, 0, 0);
-  -o-transform: translate3d(0, 0, 0);
-  transform: translate3d(0, 0, 0);
-}
-
-.slick-track {
-  position: relative;
-  top: 0;
-  left: 0;
-
-  display: block;
-}
-.slick-track:before,
-.slick-track:after {
-  display: table;
-
-  content: "";
-}
-.slick-track:after {
-  clear: both;
-}
-.slick-loading .slick-track {
-  visibility: hidden;
-}
-
-.slick-slide {
-  display: none;
-  float: left;
-
-  height: 100%;
-  min-height: 1px;
-}
-[dir="rtl"] .slick-slide {
-  float: right;
-}
-.slick-slide img {
-  display: block;
-}
-.slick-slide.slick-loading img {
-  display: none;
-}
-.slick-slide.dragging img {
-  pointer-events: none;
-}
-.slick-initialized .slick-slide {
-  display: block;
-}
-.slick-loading .slick-slide {
-  visibility: hidden;
-}
-.slick-vertical .slick-slide {
-  display: block;
-
-  height: auto;
-
-  border: 1px solid transparent;
-}
-.slick-arrow.slick-hidden {
-  display: none;
-}
-@charset 'UTF-8';
-/* Slider */
-.slick-loading .slick-list {
-  background: #fff url("http://maggiesadler.com/wp-content/uploads/2015/10/ajax-loader.gif") center center no-repeat;
-}
-
-/* Icons */
-@font-face {
-  font-family: "slick";
-  font-weight: normal;
-  font-style: normal;
-
-  src: url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot");
-  src: url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.eot?#iefix") format("embedded-opentype"), url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.woff") format("woff"), url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.ttf") format("truetype"), url("file:///C:/Users/msadler/Desktop/slick-1.5.7/slick/fonts/slick.svg#slick") format("svg");
-}
-/* Arrows */
-.slick-prev,
-.slick-next {
-  font-size: 0;
-  line-height: 0;
-
-  position: absolute;
-  top: 50%;
-
-  display: block;
-
-  width: 20px;
-  height: 20px;
-  margin-top: -10px;
-  padding: 0;
-
-  cursor: pointer;
-
-  color: transparent;
-  border: none;
-  outline: none;
-  background: transparent;
-}
-.slick-prev:hover,
-.slick-prev:focus,
-.slick-next:hover,
-.slick-next:focus {
-  color: transparent;
-  outline: none;
-  background: transparent;
-}
-.slick-prev:hover:before,
-.slick-prev:focus:before,
-.slick-next:hover:before,
-.slick-next:focus:before {
-  opacity: 1;
-}
-.slick-prev.slick-disabled:before,
-.slick-next.slick-disabled:before {
-  opacity: 0.25;
-}
-
-.slick-prev:before,
-.slick-next:before {
-  font-family: "slick";
-  font-size: 20px;
-  line-height: 1;
-
-  opacity: 0.75;
-  color: white;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
-.slick-prev {
-  left: -25px;
-}
-[dir="rtl"] .slick-prev {
-  right: -25px;
-  left: auto;
-}
-.slick-prev:before {
-  content: "";
-}
-[dir="rtl"] .slick-prev:before {
-  content: "";
-  font-weight: bold;
-  font-size: 20px;
-}
-
-.slick-next {
-  right: -25px;
-}
-[dir="rtl"] .slick-next {
-  right: auto;
-  left: -25px;
-}
-.slick-next:before {
-  content: "";
-}
-[dir="rtl"] .slick-next:before {
-  content: "";
-}
-
-/* Dots */
-.slick-slider {
-  margin-bottom: 30px;
-}
-
-.slick-dots {
-  position: absolute;
-  bottom: -45px;
-
-  display: block;
-
-  width: 100%;
-  padding: 0;
-
-  list-style: none;
-
-  text-align: center;
-}
-.slick-dots li {
-  position: relative;
-
-  display: inline-block;
-
-  width: 20px;
-  height: 20px;
-  margin: 0 5px;
-  padding: 0;
-
-  cursor: pointer;
-}
-.slick-dots li button {
-  font-size: 0;
-  line-height: 0;
-
-  display: block;
-
-  width: 20px;
-  height: 20px;
-  padding: 5px;
-
-  cursor: pointer;
-
-  color: transparent;
-  border: 0;
-  outline: none;
-  background: transparent;
-}
-.slick-dots li button:hover,
-.slick-dots li button:focus {
-  outline: none;
-}
-.slick-dots li button:hover:before,
-.slick-dots li button:focus:before {
-  opacity: 1;
-}
-.slick-dots li button:before {
-  font-family: "slick";
-  font-size: 6px;
-  line-height: 20px;
-
-  position: absolute;
-  top: 0;
-  left: 0;
-
-  width: 20px;
-  height: 20px;
-
-  content: "•";
-  text-align: center;
-
-  opacity: 0.25;
-  color: black;
-
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-.slick-dots li.slick-active button:before {
-  opacity: 0.75;
-  color: black;
 }
