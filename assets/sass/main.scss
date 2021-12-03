@@ -233,7 +233,7 @@ a {
   @include vendor("transition", ("color 0.2s ease-in-out", "border-color 0.2s ease-in-out", "background-color 0.2s ease-in-out"));
   color: darken(_palette(one, bg), 20);
   text-decoration: none;
-  border-bottom: dotted 1px;
+  // border-bottom: dotted 1px;
 
   &:hover {
     border-bottom-color: transparent;

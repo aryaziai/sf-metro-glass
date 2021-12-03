@@ -1,4 +1,4 @@
-var navString = '<header id="header" class="alt"><a href="index.html" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a href="#">Services</a> <ul> <li><a href="commercial.html">Commercial Service</a></li> <li><a href="residential.html">Residential Service</a></li> <li><a href="shower-enclosures.html">Shower Enclosure</a></li> <li><a href="references-projects.html">References & Projects</a></li> </ul> </li> <li><a href="gallery.html">Gallery</a></li> <li><a href="contact.html">Contact</a></li> </ul> </nav> </header>';
+var navString = '<header id="header" class="alt"><a href="/" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a class="link" href="#">Services</a> <ul> <li><a class="link" href="commercial">Commercial Service</a></li> <li><a class="link" href="residential">Residential Service</a></li> <li><a class="link" href="shower-enclosures">Shower Enclosure</a></li> <li><a class="link" href="references-projects">References & Projects</a></li> </ul> </li> <li><a class="link" href="gallery">Gallery</a></li> <li><a class="link" href="contact">Contact</a></li> </ul> </nav> </header>';
 var headerNav = document.querySelector("nav");
 var navbar = document.createRange().createContextualFragment(navString);
 headerNav.append(navbar);
@@ -66,7 +66,7 @@ for (var i = 0; i < fadeMeIn.length; ++i) {
   // Nav Panel.
 
   // Button.
-  $('<div id="navButton">' + '<a href="#navPanel" class="toggle"></a>' + "</div>").appendTo($body);
+  $('<div id="navButton">' + '<a class="link" href="#navPanel" class="toggle"></a>' + "</div>").appendTo($body);
 
   // Panel.
   $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
@@ -103,3 +103,9 @@ for (var i = 0; i < fadeMeIn.length; ++i) {
     });
   }
 })(jQuery);
+
+if (window.location.host.includes(":")) {
+  document.querySelectorAll(".link").forEach(function (a) {
+    a.href = a.href + ".html";
+  });
+}
