@@ -80,7 +80,7 @@ for (var i = 0; i < fadeMeIn.length; ++i) {
   // Nav Panel.
 
   // Button.
-  $('<div id="navButton">' + '<a class="link" href="#navPanel" class="toggle"></a>' + "</div>").appendTo($body);
+  $('<div id="navButton">' + '<a href="#navPanel" class="toggle"></a>' + "</div>").appendTo($body);
 
   // Panel.
   $('<div id="navPanel">' + "<nav>" + $("#nav").navList() + "</nav>" + "</div>")
@@ -119,7 +119,7 @@ for (var i = 0; i < fadeMeIn.length; ++i) {
 })(jQuery);
 
 if (window.location.host.includes(":")) {
-  document.querySelectorAll(".link").forEach(function (a) {
+  document.querySelectorAll(".link:not([href='/']").forEach(function (a) {
     a.href = a.href + ".html";
   });
 }
