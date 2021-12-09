@@ -1484,6 +1484,10 @@ header.special:after {
 header.special h2 {
   margin-bottom: 0;
 }
+header.special p {
+  margin: 1rem auto 0;
+  max-width: 50vw;
+}
 header.special .icon {
   cursor: default;
   height: 7em;
@@ -1986,7 +1990,7 @@ button.small,
   color: #fff;
 }
 #header.alt nav ul {
-  background: rgba(28, 16, 16, 0.51);
+  background: rgba(28, 16, 16, 0.57);
   color: #fff !important;
   border-radius: 20px;
 }
@@ -2141,9 +2145,9 @@ button.small,
   position: relative;
   letter-spacing: 0.225em;
   text-transform: uppercase;
-  width: 31em;
+  width: 29em;
   text-align: center;
-  margin: 0 auto 1.5em;
+  margin: 0 auto 2.4em;
 }
 
 #banner .more {

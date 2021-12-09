@@ -1,7 +1,7 @@
 // slick slider
 
 .slider {
-  max-width: 90vw;
+  max-width: 87vw;
   margin: 0 auto;
 }
 .slick-slide {
@@ -14,23 +14,22 @@ button.slick-next,
 button.slick-next:hover {
   position: absolute;
   top: 41%;
-  right: 54px;
   width: 47px;
-  height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
-  background-size: 95px;
+  height: 65px;
+  background: url("/assets/images/right-arrow.png") center / contain no-repeat;
+  filter: invert(0.8);
+  right: -50px;
 }
 button.slick-prev,
 button.slick-prev:hover {
   position: absolute;
   top: 41%;
-  left: 15px;
   z-index: 1;
   width: 47px;
-  height: 75px;
-  background-image: url("http://maggiesadler.com/wp-content/uploads/2015/10/left-right-arrow.png");
-  background-size: 95px;
-  background-position-x: right;
+  height: 65px;
+  background: url("/assets/images/left-arrow.png") center / contain no-repeat;
+  filter: invert(0.8);
+  left: -50px;
 }
 .slick-prev:before,
 .slick-next:before {
@@ -40,8 +39,8 @@ button.slick-prev:hover {
   font-weight: bold;
 }
 .slider img {
-  border-radius: 20px;
-  height: 285px;
+  border-radius: 15px;
+  height: 290px;
 }
 
 /* Slick Slider Styles -- Provided by https://kenwheeler.github.io/slick/ */
