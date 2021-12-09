@@ -112,7 +112,7 @@ if (window.location.host.includes(":")) {
 }
 
 if (!window.location.host.includes(":")) {
-  document.querySelectorAll(".home").forEach(function (a) {
+  document.querySelectorAll("a[href='/']").forEach(function (a) {
     a.href = "https://aryaziai.github.io/sf-metro-glass/";
   });
 }
