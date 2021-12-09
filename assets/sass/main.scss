@@ -189,6 +189,10 @@ textarea {
   appearance: none;
 }
 
+.text-normal {
+  text-transform: initial;
+}
+
 /* Basic */
 
 // Set box model to border-box.
@@ -716,7 +720,7 @@ button,
   color: inherit;
   cursor: pointer;
   display: inline-block;
-  font-size: 0.8em;
+  font-size: 0.77em;
   font-weight: 900;
   letter-spacing: 2px;
   padding: 0 2.75em;
@@ -724,6 +728,7 @@ button,
   text-align: center;
   text-decoration: none;
   text-transform: uppercase;
+  white-space: nowrap;
 
   &:hover {
     background: rgba(188, 202, 206, 0.15);
@@ -762,7 +767,7 @@ button,
 
 .wrapper {
   margin-bottom: 8.5em;
-  padding: 7em 6em 6em;
+  padding: 7em 6em 5em;
 
   &.style1 {
     padding: 0;
@@ -1281,6 +1286,14 @@ body.index #main {
 
 /* Footer */
 
+.mt-3 {
+  margin-top: 1.1rem;
+}
+
+.pt-0 {
+  padding-top: 0;
+}
+
 #footer {
   background: #fff;
   color: _palette(footer, fg);
@@ -1292,7 +1305,7 @@ body.index #main {
   line-height: 2;
 
   a {
-    color: inherit;
+    padding: 0 0.5rem;
   }
 
   li {
@@ -1946,6 +1959,8 @@ body.index #main {
     padding: 3em 1.5em;
 
     .copyright {
+      line-height: 0.5;
+
       li {
         display: block;
         margin: 1em 0 0 0;

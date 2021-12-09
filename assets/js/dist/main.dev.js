@@ -1,10 +1,23 @@
 "use strict";
 
-var navString = '<header id="header" class="alt"><a href="/" style="border: none"><img src="assets/images/logo.png" width="300px" class="logo" /></a> <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li> <li class="submenu"> <a class="link" href="#">Services</a> <ul> <li><a class="link" href="commercial">Commercial Service</a></li> <li><a class="link" href="residential">Residential Service</a></li> <li><a class="link" href="shower-enclosures">Shower Enclosure</a></li> <li><a class="link" href="references-projects">References & Projects</a></li> </ul> </li> <li><a class="link" href="gallery">Gallery</a></li> <li><a class="link" href="contact">Contact</a></li> </ul> </nav> </header>';
+var navString = '<header id="header" class="alt"><a href="/" style="border: none">\
+<img src="assets/images/logo.png" width="300px" class="logo" /></a>\
+<nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li>\
+<li class="submenu"> <a class="link" href="#">Services</a> <ul> <li>\
+<a class="link" href="commercial">Commercial Service</a></li>\
+<li><a class="link" href="residential">Residential Service</a></li>\
+<li><a class="link" href="shower-enclosures">Shower Enclosure</a></li>\
+<li><a class="link" href="references-projects">References & Projects</a></li>\
+</ul> </li> <li><a class="link" href="gallery">Gallery</a></li>\
+<li><a class="link" href="contact">Contact</a></li></ul> </nav> </header>';
 var headerNav = document.querySelector("nav");
 var navbar = document.createRange().createContextualFragment(navString);
 headerNav.append(navbar);
-var footerString = '27 Jordan Street, Suite D San Rafael, CA 94901<ul class="copyright"><li>&copy; Metropolitan Glass Corp</li> </ul>';
+var footerString = '<a href="/">Home</a> | \
+<a href="references-projects" class="link">References & Projects</a> | \
+<a href="contact" class="link">Contact Us</a>\
+<div class="mt-3">27 Jordan Street, Suite D San Rafael, CA 94901</div>\
+<ul class="copyright"><li>&copy; Metropolitan Glass Corp</li> </ul>';
 var footerNav = document.querySelector("#footer");
 var footer = document.createRange().createContextualFragment(footerString);
 footerNav.append(footer); // Fade in elements on scroll
