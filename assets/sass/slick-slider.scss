@@ -16,7 +16,7 @@ button.slick-next:hover {
   top: 41%;
   width: 47px;
   height: 65px;
-  background: url("/assets/images/right-arrow.png") center / contain no-repeat;
+  background: url("../../images/right-arrow.png") center / contain no-repeat;
   filter: invert(0.8);
   right: -50px;
 }
@@ -27,7 +27,7 @@ button.slick-prev:hover {
   z-index: 1;
   width: 47px;
   height: 65px;
-  background: url("/assets/images/left-arrow.png") center / contain no-repeat;
+  background: url("../../images/left-arrow.png") center / contain no-repeat;
   filter: invert(0.8);
   left: -50px;
 }

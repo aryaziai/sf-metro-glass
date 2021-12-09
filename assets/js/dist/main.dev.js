@@ -1,7 +1,7 @@
 "use strict";
 
 var navString = '<header id="header" class="alt"><a href="/" style="border: none">\
-<img src="assets/images/logo.png" width="300px" class="logo" /></a>\
+<img src="assets/images/logo.png" width="300px" class="logo home" /></a>\
 <nav id="nav"> <ul> <li class="current"><a href="/">Home</a></li>\
 <li class="submenu"> <a class="link" href="#">Services</a> <ul> <li>\
 <a class="link" href="commercial">Commercial Service</a></li>\
@@ -13,7 +13,7 @@ var navString = '<header id="header" class="alt"><a href="/" style="border: none
 var headerNav = document.querySelector("nav");
 var navbar = document.createRange().createContextualFragment(navString);
 headerNav.append(navbar);
-var footerString = '<a href="/">Home</a> | \
+var footerString = '<a href="/" class="home">Home</a> | \
 <a href="references-projects" class="link">References & Projects</a> | \
 <a href="contact" class="link">Contact Us</a>\
 <div class="mt-3">27 Jordan Street, Suite D San Rafael, CA 94901</div>\
@@ -108,5 +108,11 @@ for (var i = 0; i < fadeMeIn.length; ++i) {
 if (window.location.host.includes(":")) {
   document.querySelectorAll(".link").forEach(function (a) {
     a.href = a.href + ".html";
+  });
+}
+
+if (!window.location.host.includes(":")) {
+  document.querySelectorAll(".home").forEach(function (a) {
+    a.href = "https://aryaziai.github.io/sf-metro-glass/";
   });
 }
