@@ -1800,6 +1800,10 @@ body.index #main {
 @include breakpoint("<=mobile") {
   $pattern-background-size: 10em;
 
+  #banner video {
+    display: none;
+  }
+
   /* Basic */
 
   body {

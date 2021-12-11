@@ -2736,6 +2736,10 @@ button.small,
 }
 /* Mobile */
 @media screen and (max-width: 736px) {
+  #banner video {
+    display: none;
+  }
+
   /* Basic */
   body {
     min-width: 320px;
