@@ -1201,7 +1201,7 @@ button,
   .inner {
     @include vendor("animation", "reveal-banner 0.5s 0.25s ease-in-out");
     @include vendor("animation-fill-mode", "forwards");
-    background: rgba(28, 16, 16, 0.51);
+    background: rgb(36 29 29 / 71%);
     color: _palette(banner, inner-fg);
     opacity: 0;
     padding: 3em;
