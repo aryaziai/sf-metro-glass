@@ -1666,6 +1666,14 @@ ul.featured-icons li .icon {
 }
 
 /* Buttons */
+.down-arrow {
+  filter: invert(1);
+  width: 15px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  vertical-align: middle;
+}
+
 ul.buttons {
   cursor: default;
   list-style: none;
@@ -2109,6 +2117,9 @@ button.small,
 #banner.contact-wallpaper {
   background: url("../../images/wallpaper/contact-wallpaper.jpg") fixed center/cover no-repeat;
 }
+#banner.gallery-wallpaper {
+  background: url("../../images/wallpaper/gallery-wallpaper.jpg") fixed center/cover no-repeat;
+}
 #banner.shower-wallpaper {
   background: url("../../images/wallpaper/shower-wallpaper.jpg") fixed center/cover no-repeat;
 }
@@ -2194,6 +2205,10 @@ button.small,
     position: fixed;
     min-width: 100%;
   }
+
+  .d-flex-desktop {
+    display: flex;
+  }
 }
 @media screen and (max-width: 846px) {
   .video {
@@ -2249,6 +2264,8 @@ button.small,
   padding: 7em 0 0;
   background: white;
   position: relative;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 #main > :last-child {
   margin-bottom: 0;

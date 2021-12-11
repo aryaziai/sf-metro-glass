@@ -644,6 +644,14 @@ ul.featured-icons {
 
 /* Buttons */
 
+.down-arrow {
+  filter: invert(1);
+  width: 15px;
+  margin-left: 5px;
+  margin-bottom: 3px;
+  vertical-align: middle;
+}
+
 ul.buttons {
   cursor: default;
   list-style: none;
@@ -1070,6 +1078,10 @@ button,
     background: url("../../images/wallpaper/contact-wallpaper.jpg") fixed center / cover no-repeat;
   }
 
+  &.gallery-wallpaper {
+    background: url("../../images/wallpaper/gallery-wallpaper.jpg") fixed center / cover no-repeat;
+  }
+
   &.shower-wallpaper {
     background: url("../../images/wallpaper/shower-wallpaper.jpg") fixed center / cover no-repeat;
   }
@@ -1161,6 +1173,10 @@ button,
     position: fixed;
     min-width: 100%;
   }
+
+  .d-flex-desktop {
+    display: flex;
+  }
 }
 
 @media screen and (max-width: 846px) {
@@ -1246,6 +1262,9 @@ button,
 
   background: white;
   position: relative;
+
+  max-width: 1400px;
+  margin: 0 auto;
 
   > :last-child {
     margin-bottom: 0;
