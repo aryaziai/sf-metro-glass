@@ -2257,14 +2257,12 @@ button.small,
 
 /* Main */
 #main {
-  background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
   background-size: 25em;
   padding: 7em 0 0;
   background: white;
   position: relative;
-  max-width: 1400px;
   margin: 0 auto;
 }
 #main > :last-child {
@@ -2603,7 +2601,6 @@ button.small,
     left: 0;
     position: fixed;
     top: 0;
-    width: 100%;
     z-index: 10001;
   }
   #navButton .toggle {
@@ -2750,7 +2747,6 @@ button.small,
   }
 
   h3 {
-    font-size: 1em;
     letter-spacing: 0.025em;
   }
 
@@ -2827,7 +2823,7 @@ button.fit,
     display: none;
   }
   .wrapper.style1 {
-    padding: 0 1.5em;
+    padding: 2rem;
   }
   .wrapper.style4 {
     background-size: 10em;

@@ -1254,7 +1254,7 @@ button,
 /* Main */
 
 #main {
-  background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
+  // background-image: url("images/dark-tl.svg"), url("images/dark-tr.svg"), url("images/dark-bl.svg"), url("images/dark-br.svg");
   background-position: top left, top right, bottom left, bottom right;
   background-repeat: no-repeat;
   background-size: $pattern-background-size;
@@ -1263,7 +1263,6 @@ button,
   background: white;
   position: relative;
 
-  max-width: 1400px;
   margin: 0 auto;
 
   > :last-child {
@@ -1678,7 +1677,7 @@ body.index #main {
     left: 0;
     position: fixed;
     top: 0;
-    width: 100%;
+    // width: 100%;
     z-index: _misc(z-index-base) + 1;
 
     .toggle {
@@ -1813,7 +1812,7 @@ body.index #main {
   }
 
   h3 {
-    font-size: 1em;
+    // font-size: 1em;
     letter-spacing: 0.025em;
   }
 
@@ -1917,7 +1916,7 @@ body.index #main {
     }
 
     &.style1 {
-      padding: 0 1.5em;
+      padding: 2rem;
     }
 
     &.style4 {
