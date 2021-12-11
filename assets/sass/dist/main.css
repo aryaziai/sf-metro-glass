@@ -2103,7 +2103,7 @@ button.small,
   background-color: #4d3f3b;
 }
 #banner.home-wallpaper {
-  background: url("../../images/wallpaper/home-wallpaper.png") fixed center/cover no-repeat;
+  background: url("../../images/wallpaper/home-wallpaper.png") fixed center/cover no-repeat !important;
 }
 #banner.commercial-wallpaper {
   background: url("../../images/wallpaper/commercial-wallpaper.jpg") fixed center/cover no-repeat;
@@ -2220,10 +2220,10 @@ button.small,
   }
 }
 #banner .inner {
-  -moz-animation: reveal-banner 1s 0.25s ease-in-out;
-  -webkit-animation: reveal-banner 1s 0.25s ease-in-out;
-  -ms-animation: reveal-banner 1s 0.25s ease-in-out;
-  animation: reveal-banner 1s 0.25s ease-in-out;
+  -moz-animation: reveal-banner 0.5s 0.25s ease-in-out;
+  -webkit-animation: reveal-banner 0.5s 0.25s ease-in-out;
+  -ms-animation: reveal-banner 0.5s 0.25s ease-in-out;
+  animation: reveal-banner 0.5s 0.25s ease-in-out;
   -moz-animation-fill-mode: forwards;
   -webkit-animation-fill-mode: forwards;
   -ms-animation-fill-mode: forwards;

@@ -1059,7 +1059,7 @@ button,
   background-color: #4d3f3b;
 
   &.home-wallpaper {
-    background: url("../../images/wallpaper/home-wallpaper.png") fixed center / cover no-repeat;
+    background: url("../../images/wallpaper/home-wallpaper.png") fixed center / cover no-repeat !important;
   }
 
   &.commercial-wallpaper {
@@ -1199,7 +1199,7 @@ button,
   //   padding: 13rem;
 
   .inner {
-    @include vendor("animation", "reveal-banner 1s 0.25s ease-in-out");
+    @include vendor("animation", "reveal-banner 0.5s 0.25s ease-in-out");
     @include vendor("animation-fill-mode", "forwards");
     background: rgba(28, 16, 16, 0.51);
     color: _palette(banner, inner-fg);
