@@ -156,10 +156,6 @@ button.slick-prev:hover {
 }
 
 /* Slider */
-.slick-loading .slick-list {
-  background: #fff url("http://maggiesadler.com/wp-content/uploads/2015/10/ajax-loader.gif") center center no-repeat;
-}
-
 /* Icons */
 @font-face {
   font-family: "slick";
