@@ -771,12 +771,6 @@ button,
 
 /* Wrapper */
 
-.black-round-bg {
-  background: rgb(40 30 27 / 98%);
-  border-radius: 2vw;
-  padding: 4vw !important;
-}
-
 .wrapper {
   margin-bottom: 8.5em;
   padding: 7em 6em 5em;
@@ -1120,7 +1114,7 @@ button,
   text-transform: uppercase;
   width: 29em;
   text-align: center;
-  margin: 0 auto 2.4em;
+  margin: 0 auto 20px;
 }
 
 #banner .more {
@@ -1211,10 +1205,6 @@ button,
     display: flex;
     align-items: center;
     justify-content: center;
-
-    &.grey {
-      background: rgb(36 29 29 / 71%);
-    }
 
     header {
       display: inline-block;
